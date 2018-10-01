@@ -13,5 +13,5 @@ func NewDollar(amount int) *Dollar {
 
 // Times : multipier倍にして返す
 func (dollar *Dollar) Times(multipier int) {
-	dollar.Amount = dollar.Amount * 2
+	dollar.Amount = dollar.Amount * multipier
 }
