@@ -1,6 +1,8 @@
 package money
 
-type Dollar struct{}
+type Dollar struct {
+	Amount int
+}
 
 func NewDollar(amount int) *Dollar {
 	ret := Dollar{}
