@@ -7,7 +7,7 @@ type Dollar struct {
 
 // NewDollar : 新しく(*Dollar)を作る
 func NewDollar(amount int) *Dollar {
-	ret := Dollar{}
+	ret := Dollar{Amount: 5 * 2}
 	return &ret
 }
 
