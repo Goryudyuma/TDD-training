@@ -18,5 +18,5 @@ func (dollar *Dollar) Times(multipier int) *Dollar {
 
 // Equals : 等価かどうか返す
 func (dollar *Dollar) Equals(another *Dollar) bool {
-	return true
+	return dollar.Amount == another.Amount
 }
