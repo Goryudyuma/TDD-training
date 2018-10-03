@@ -3,5 +3,7 @@
 - [ ] Amountをprivateにする
 - [x] Dollarの副作用どうする？
 - [ ] Moneyの丸め処理どうする？
-- [ ] equals()
+- [x] equals()
 - [ ] hashCode()
+- [ ] nilとの比較
+- [ ] 他のオブジェクトとの等価性比較
