@@ -20,4 +20,8 @@ func TestEquality(t *testing.T) {
 	if !NewDollar(5).Equals(NewDollar(5)) {
 		t.Error(`$5 と $5 が等価ではなかった`)
 	}
+
+	if NewDollar(5).Equals(NewDollar(6)) {
+		t.Error(`$5 と $6 が等価だった`)
+	}
 }
