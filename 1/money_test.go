@@ -23,3 +23,13 @@ func TestEquality(t *testing.T) {
 		t.Error(`$5 と $6 が等価だった`)
 	}
 }
+
+func TestFrancMultiplication(t *testing.T) {
+	five = NewFranc(5)
+	if *five.Times(2) != *NewFranc(10) {
+		t.Error(`$5 * 2 が $10じゃなかった`)
+	}
+	if *five.Times(3) != *NewFranc(15) {
+		t.Error(`$5 * 3 が $15じゃなかった`)
+	}
+}
