@@ -6,12 +6,10 @@ import (
 
 func TestMultiplication(t *testing.T) {
 	five := NewDollar(5)
-	product := five.Times(2)
-	if *product != *NewDollar(10) {
+	if *five.Times(2) != *NewDollar(10) {
 		t.Error(`$5 * 2 が $10じゃなかった`)
 	}
-	product = five.Times(3)
-	if *product != *NewDollar(15) {
+	if *five.Times(3) != *NewDollar(15) {
 		t.Error(`$5 * 3 が $15じゃなかった`)
 	}
 }
