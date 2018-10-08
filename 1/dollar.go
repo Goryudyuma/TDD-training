@@ -2,12 +2,12 @@ package money
 
 // Dollar : ドル
 type Dollar struct {
-	amount int
+	Money
 }
 
 // NewDollar : 新しく(*Dollar)を作る
 func NewDollar(amount int) *Dollar {
-	ret := Dollar{amount: amount}
+	ret := Dollar{Money{amount: amount}}
 	return &ret
 }
 
