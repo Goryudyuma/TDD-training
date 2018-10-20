@@ -15,8 +15,3 @@ func NewDollar(amount int) *Dollar {
 func (dollar *Dollar) Times(multipier int) *Dollar {
 	return NewDollar(dollar.amount * multipier)
 }
-
-// getAmount : Amountを返す
-func (dollar *Dollar) getAmount() int {
-	return dollar.amount
-}
