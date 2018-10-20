@@ -22,6 +22,14 @@ func TestEquality(t *testing.T) {
 	if NewDollar(5).Equals(NewDollar(6)) {
 		t.Error(`$5 と $6 が等価だった`)
 	}
+
+	if !NewFranc(5).Equals(NewFranc(5)) {
+		t.Error(`5 CHF と 5 CHF が等価ではなかった`)
+	}
+
+	if NewFranc(5).Equals(NewFranc(6)) {
+		t.Error(`5 CHF と 6 CHF が等価だった`)
+	}
 }
 
 func TestFrancMultiplication(t *testing.T) {
