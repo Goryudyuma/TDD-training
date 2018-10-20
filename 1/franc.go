@@ -15,8 +15,3 @@ func NewFranc(amount int) *Franc {
 func (Franc *Franc) Times(multipier int) *Franc {
 	return NewFranc(Franc.amount * multipier)
 }
-
-// Equals : 等価かどうか返す
-func (Franc *Franc) Equals(another *Franc) bool {
-	return Franc.amount == another.amount
-}
