@@ -2,12 +2,12 @@ package money
 
 // Franc : フラン
 type Franc struct {
-	amount int
+	Money
 }
 
 // NewFranc : 新しく(*Franc)を作る
 func NewFranc(amount int) *Franc {
-	ret := Franc{amount: amount}
+	ret := Franc{Money{amount: amount}}
 	return &ret
 }
 
