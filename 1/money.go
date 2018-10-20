@@ -4,3 +4,7 @@ package money
 type Money struct {
 	amount int
 }
+
+type MoneyInterface interface {
+	getAmount() int
+}

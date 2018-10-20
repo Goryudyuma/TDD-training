@@ -18,5 +18,10 @@ func (dollar *Dollar) Times(multipier int) *Dollar {
 
 // Equals : 等価かどうか返す
 func (dollar *Dollar) Equals(another *Dollar) bool {
-	return dollar.amount == another.amount
+	return dollar.getAmount() == another.getAmount()
+}
+
+// getAmount : Amountを返す
+func (dollar *Dollar) getAmount() int {
+	return dollar.amount
 }
