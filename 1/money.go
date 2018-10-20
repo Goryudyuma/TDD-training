@@ -10,6 +10,7 @@ func (money *Money) Equals(another MoneyInterface) bool {
 	return money.amount == another.getAmount()
 }
 
+// MoneyInterface : Amountを取り出すinterfaceを持っているもの
 type MoneyInterface interface {
 	getAmount() int
 }
