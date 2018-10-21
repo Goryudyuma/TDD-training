@@ -7,7 +7,7 @@ type Franc struct {
 
 // NewFranc : 新しく(*Franc)を作る
 func NewFranc(amount int) *Franc {
-	ret := Franc{Money{amount: amount}}
+	ret := Franc{Money{amount: amount, class: "Franc"}}
 	return &ret
 }
 
