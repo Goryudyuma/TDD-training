@@ -30,13 +30,13 @@ func NewMoney(amount int, class string) Money {
 
 // NewDollar : 新しく(*Dollar)を作る
 func NewDollar(amount int) *Dollar {
-	ret := Dollar{Money{amount: amount, class: "Dollar"}}
+	ret := Dollar{NewMoney(amount, "Dollar")}
 	return &ret
 }
 
 // NewFranc : 新しく(*Franc)を作る
 func NewFranc(amount int) *Franc {
-	ret := Franc{Money{amount: amount, class: "Franc"}}
+	ret := Franc{NewMoney(amount, "Franc")}
 	return &ret
 }
 
