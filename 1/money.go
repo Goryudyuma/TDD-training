@@ -22,6 +22,12 @@ func (money *Money) getClass() string {
 	return money.class
 }
 
+// NewMoney : 新しく(Money)を作る
+func NewMoney(amount int, class string) Money {
+	ret := Money{amount: amount, class: class}
+	return ret
+}
+
 // NewDollar : 新しく(*Dollar)を作る
 func NewDollar(amount int) *Dollar {
 	ret := Dollar{Money{amount: amount, class: "Dollar"}}
