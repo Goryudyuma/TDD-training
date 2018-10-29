@@ -45,3 +45,12 @@ func TestFrancMultiplication(t *testing.T) {
 		t.Error(`$5 * 3 が $15じゃなかった`)
 	}
 }
+
+func TestCurrency(t *testing.T) {
+	if "USD" != NewDollar(1).Currency() {
+		t.Error(`DollarはUSDではなかった`)
+	}
+	if "CHF" != NewFranc(1).Currency() {
+		t.Error(`FrancはCHFではなかった`)
+	}
+}
