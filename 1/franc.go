@@ -6,6 +6,6 @@ type Franc struct {
 }
 
 // Times : multipier倍にして返す
-func (Franc *Franc) Times(multipier int) *Franc {
-	return NewFranc(Franc.amount * multipier)
+func (franc *Franc) Times(multipier int) *Franc {
+	return NewFranc(franc.amount * multipier)
 }
