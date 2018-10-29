@@ -44,4 +44,5 @@ func NewFranc(amount int) *Franc {
 type MoneyInterface interface {
 	getAmount() int
 	getClass() string
+	Currency() string
 }
