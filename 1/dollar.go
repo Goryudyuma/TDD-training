@@ -3,6 +3,7 @@ package money
 // Dollar : ドル
 type Dollar struct {
 	Money
+	currency string
 }
 
 // Times : multipier倍にして返す
@@ -11,6 +12,6 @@ func (dollar *Dollar) Times(multipier int) *Dollar {
 }
 
 // Currency : "USD"を返す
-func (*Dollar) Currency() string {
-	return "USD"
+func (dollar *Dollar) Currency() string {
+	return dollar.currency
 }

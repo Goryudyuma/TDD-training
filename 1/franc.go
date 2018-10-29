@@ -3,6 +3,7 @@ package money
 // Franc : フラン
 type Franc struct {
 	Money
+	currency string
 }
 
 // Times : multipier倍にして返す
@@ -11,6 +12,6 @@ func (franc *Franc) Times(multipier int) *Franc {
 }
 
 // Currency : "CHF"を返す
-func (*Franc) Currency() string {
-	return "CHF"
+func (franc *Franc) Currency() string {
+	return franc.currency
 }
