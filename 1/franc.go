@@ -9,3 +9,8 @@ type Franc struct {
 func (franc *Franc) Times(multipier int) *Franc {
 	return NewFranc(franc.amount * multipier)
 }
+
+// Currency : "CHF"を返す
+func (*Franc) Currency() string {
+	return "CHF"
+}
