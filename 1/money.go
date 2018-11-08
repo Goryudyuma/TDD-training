@@ -46,6 +46,11 @@ func NewFranc(amount int) *Franc {
 	return &ret
 }
 
+// Times : multipier倍にして返す
+func (franc *Franc) Times(multipier int) *Franc {
+	return NewFranc(franc.amount * multipier)
+}
+
 // MoneyInterface : Amountを取り出すinterfaceを持っているもの
 type MoneyInterface interface {
 	getAmount() int
