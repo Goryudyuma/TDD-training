@@ -29,20 +29,20 @@ func (money *Money) Currency() string {
 }
 
 // NewMoney : 新しく(Money)を作る
-func NewMoney(amount int, class string, currency string) Money {
+func NewMoney(amount int, class string, currency string) *Money {
 	ret := Money{amount: amount, class: class, currency: currency}
-	return ret
+	return &ret
 }
 
 // NewDollar : 新しく(*Dollar)を作る
 func NewDollar(amount int) *Dollar {
-	ret := Dollar{NewMoney(amount, "Dollar", "USD")}
+	ret := Dollar{*NewMoney(amount, "Dollar", "USD")}
 	return &ret
 }
 
 // NewFranc : 新しく(*Franc)を作る
 func NewFranc(amount int) *Franc {
-	ret := Franc{NewMoney(amount, "Franc", "CHF")}
+	ret := Franc{*NewMoney(amount, "Franc", "CHF")}
 	return &ret
 }
 
