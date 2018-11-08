@@ -47,8 +47,8 @@ func NewFranc(amount int) *Franc {
 }
 
 // Times : multipier倍にして返す
-func (money *Money) Times(multipier int) *Franc {
-	return NewFranc(money.amount * multipier)
+func (money *Money) Times(multipier int) *Money {
+	return NewMoney(money.amount*multipier, money.class, money.currency)
 }
 
 // MoneyInterface : Amountを取り出すinterfaceを持っているもの
