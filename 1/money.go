@@ -34,13 +34,13 @@ func NewMoney(amount int, class string, currency string) *Money {
 	return &ret
 }
 
-// NewDollar : 新しく(*Dollar)を作る
+// NewDollar : 新しく(*Money)を作る
 func NewDollar(amount int) *Money {
 	ret := NewMoney(amount, "Dollar", "USD")
 	return ret
 }
 
-// NewFranc : 新しく(*Franc)を作る
+// NewFranc : 新しく(*Money)を作る
 func NewFranc(amount int) *Money {
 	ret := NewMoney(amount, "Franc", "CHF")
 	return ret
