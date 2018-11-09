@@ -41,9 +41,9 @@ func NewDollar(amount int) *Money {
 }
 
 // NewFranc : 新しく(*Franc)を作る
-func NewFranc(amount int) *Franc {
-	ret := Franc{*NewMoney(amount, "Franc", "CHF")}
-	return &ret
+func NewFranc(amount int) *Money {
+	ret := NewMoney(amount, "Franc", "CHF")
+	return ret
 }
 
 // Times : multipier倍にして返す
