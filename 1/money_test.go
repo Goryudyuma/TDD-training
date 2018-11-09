@@ -36,16 +36,6 @@ func TestEquality(t *testing.T) {
 	}
 }
 
-func TestFrancMultiplication(t *testing.T) {
-	five := NewFranc(5)
-	if !(*five).Times(2).Equals(NewFranc(10)) {
-		t.Error(`$5 * 2 が $10じゃなかった`)
-	}
-	if !(*five).Times(3).Equals(NewFranc(15)) {
-		t.Error(`$5 * 3 が $15じゃなかった`)
-	}
-}
-
 func TestCurrency(t *testing.T) {
 	if "USD" != NewDollar(1).Currency() {
 		t.Error(`DollarはUSDではなかった`)
