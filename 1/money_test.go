@@ -36,3 +36,9 @@ func TestCurrency(t *testing.T) {
 		t.Error(`FrancはCHFではなかった`)
 	}
 }
+
+func TestSimpleAddition(t *testing.T) {
+	if !NewDollar(5).Plus(NewDollar(5)).Equals(NewDollar(10)) {
+		t.Error("$5 + $5 が $10 ではなかった")
+	}
+}
