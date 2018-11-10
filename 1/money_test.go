@@ -38,7 +38,12 @@ func TestCurrency(t *testing.T) {
 }
 
 func TestSimpleAddition(t *testing.T) {
-	if !NewDollar(5).Plus(NewDollar(5)).Equals(NewDollar(10)) {
-		t.Error("$5 + $5 が $10 ではなかった")
+	sum := NewDollar(5).Plus(NewDollar(5))
+	if !sum.Equals(NewDollar(10)) {
+		t.Error(`$5 + $5 が $10 ではなかった`)
+	}
+	reduced := bank.reduce(sum, "USD")
+	if !NewDollar(10).Equals(reduced){
+		t.Error(`$5 + $5 をUSDに変換すると、 $10 となる`)
 	}
 }
