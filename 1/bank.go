@@ -12,9 +12,5 @@ func NewBank() *Bank {
 
 // Reduce : 変換して返す
 func (*Bank) Reduce(source Expression, to string) *Money {
-	if v, ok := source.(*Money); ok {
-		return v.Reduce(to)
-	}
-	sum := source.(*Sum)
-	return sum.Reduce(to)
+	return source.Reduce(to)
 }
