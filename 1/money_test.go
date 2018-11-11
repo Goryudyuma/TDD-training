@@ -46,3 +46,15 @@ func TestSimpleAddition(t *testing.T) {
 		t.Error(`$5 + $5 をUSDに変換すると、 $10 となる`)
 	}
 }
+
+func TestPlusReturnsSum(t *testing.T) {
+	five := NewDollar(5)
+	result := five.Plus(five)
+	sum := result.Sum
+	if !five.Equals(sum.Augend) {
+		t.Error(`$5 は Sum.Augendではなかった`)
+	}
+	if !five.Equals(sum.Addend) {
+		t.Error(`$5 は Sum.Addendではなかった`)
+	}
+}
