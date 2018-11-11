@@ -9,3 +9,9 @@ type Sum struct {
 func NewSum(augend, addend *Money) *Sum {
 	return &Sum{Augend: augend, Addend: addend}
 }
+
+// Reduce : 足し算して返す
+func (sum *Sum) Reduce(to string) *Money {
+	amount := sum.Augend.getAmount() + sum.Addend.getAmount()
+	return NewMoney(amount, to)
+}
