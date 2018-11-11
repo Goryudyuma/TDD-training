@@ -52,8 +52,8 @@ func (money *Money) Times(multipier int) *Money {
 }
 
 // Plus : addedndを足して返す
-func (money *Money) Plus(addednd *Money) *Money {
-	return NewMoney(money.amount+addednd.amount, money.class, money.currency)
+func (money *Money) Plus(addednd *Money) *Sum {
+	return NewSum(money, addend)
 }
 
 // MoneyInterface : Amountを取り出すinterfaceを持っているもの
