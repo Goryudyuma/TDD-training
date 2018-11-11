@@ -58,3 +58,12 @@ func TestPlusReturnsSum(t *testing.T) {
 		t.Error(`$5 は Sum.Addendではなかった`)
 	}
 }
+
+func TestReduceSum(t *testing.T) {
+	sum := NewSum(NewDollar(3), NewDollar(4))
+	bank := NewBank()
+	result := bank.Reduce(sum, "USD")
+	if !NewDollar(7).Equals(result) {
+		t.Error(`$3 と $4 を足して、USDで取り出すと、 $7 となる`)
+	}
+}
