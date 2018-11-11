@@ -50,6 +50,11 @@ func (money *Money) Plus(addend *Money) *Sum {
 	return NewSum(money, addend)
 }
 
+// Reduce : 変換して返す
+func (money *Money) Reduce(to string) *Money {
+	return money
+}
+
 // MoneyInterface : Amountを取り出すinterfaceを持っているもの
 type MoneyInterface interface {
 	getAmount() int
