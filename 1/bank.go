@@ -12,7 +12,7 @@ func NewBank() *Bank {
 
 // Reduce : 変換して返す
 func (*Bank) Reduce(source Expression, to string) *Money {
-	sum := source.(Sum)
+	sum := source.(*Sum)
 	amount := sum.Augend.getAmount() + sum.Addend.getAmount()
 
 	return NewMoney(amount, to)
