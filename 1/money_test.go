@@ -50,7 +50,7 @@ func TestSimpleAddition(t *testing.T) {
 func TestPlusReturnsSum(t *testing.T) {
 	five := NewDollar(5)
 	result := five.Plus(five)
-	sum := result.Sum
+	sum := result
 	if !five.Equals(sum.Augend) {
 		t.Error(`$5 は Sum.Augendではなかった`)
 	}
