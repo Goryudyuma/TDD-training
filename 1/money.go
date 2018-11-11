@@ -52,7 +52,7 @@ func (money *Money) Times(multipier int) *Money {
 }
 
 // Plus : addedndを足して返す
-func (money *Money) Plus(addednd *Money) *Sum {
+func (money *Money) Plus(addend *Money) *Sum {
 	return NewSum(money, addend)
 }
 
