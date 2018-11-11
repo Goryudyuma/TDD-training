@@ -67,3 +67,11 @@ func TestReduceSum(t *testing.T) {
 		t.Error(`$3 と $4 を足して、USDで取り出すと、 $7 となる`)
 	}
 }
+
+func TestReduceMoney(t *testing.T) {
+	bank := NewBank()
+	result := bank.Reduce(NewDollar(1), "USD")
+	if !NewDollar(1).Equals(result){
+		t.Error(`$1 を変換した結果 $1 ではなくなった`)
+	}
+}
